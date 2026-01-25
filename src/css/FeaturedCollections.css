@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+#collection {
+  width: 100%;
+  min-height: 55vh;
+  background-color: #fbfaff;
+  padding: 5vh 0;
+  box-sizing: border-box;
+}
+
+#collection h1 {
+  color: #474747;
+  padding-left: 7vw;
+  margin-bottom: 3vh;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 600;
+}
+
+#collectionTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5vw;
+  padding: 0 5vw;
+  margin-bottom: 3vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#collectionTitle > div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: calc((100% - 10vw - 3vw) / 3);
+}
+
+#collectionTitle img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+#collection img {
+  transition: filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#collection img:hover {
+  transform: scale(1.05);
+  filter: brightness(0.9);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.destaqueIcon {
+  background-color: #fbfaff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh 0;
+  box-sizing: border-box;
+}
+
+.destaqueIcon h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 3vh;
+  color: #474747;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 600;
+  padding: 0 5vw;
+}
+
+.destaqueIconImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5vh;
+  width: 100%;
+  padding: 0 5vw;
+}
+
+.destaqueIconImg img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  transform: scale(1.05);
+}
+
+.destaqueIconImg img:hover {
+  transform: scale(3.05);
+  filter: brightness(0.9);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #collection {
+    min-height: auto;
+    padding: 3vh 0;
+  }
+
+  #collection h1 {
+    padding-left: 5vw;
+    margin-bottom: 2vh;
+    font-size: 1.5rem;
+  }
+
+  #collectionTitle {
+    flex-direction: column;
+    gap: 2vh;
+    padding: 0 3vw;
+  }
+
+  #collectionTitle > div {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .destaqueIcon {
+    padding: 3vh 0;
+  }
+
+  .destaqueIcon h1 {
+    font-size: 1.5rem;
+    margin-bottom: 2vh;
+    padding: 0 3vw;
+  }
+
+  .destaqueIconImg {
+    padding: 0 3vw;
+    margin-bottom: 3vh;
+  }
+}
+
+@media (max-width: 480px) {
+  #collection h1 {
+    padding-left: 4vw;
+    font-size: 1.25rem;
+  }
+
+  #collectionTitle {
+    padding: 0 2vw;
+    gap: 1.5vh;
+  }
+
+  .destaqueIcon h1 {
+    font-size: 1.25rem;
+    padding: 0 4vw;
+  }
+
+  .destaqueIconImg {
+    padding: 0 4vw;
+  }
+}
+

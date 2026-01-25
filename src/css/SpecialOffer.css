@@ -1,0 +1,151 @@
+.offer {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.offerImg {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    position: relative;
+}
+
+.offerImg img {
+    flex: 1;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+}
+
+.offerImg::before {
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, #e8d5ff 0%, #d4b5ff 100%);
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.specialOffer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    z-index: 2;
+}
+
+.specialOffer h3 {
+    color: #C92071;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    
+}
+
+.specialOffer h1 {
+    color: #2c2c2c;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.specialOffer p {
+    color: #6b6b6b;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 500px;
+}
+
+.specialOffer button {
+    background-color: #e91e63;
+    color: #ffffff;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+    margin-top: 0.5rem;
+}
+
+.specialOffer button:hover {
+    background-color: #c2185b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(233, 30, 99, 0.3);
+}
+
+.specialOffer button:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .offerImg {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .offerImg::before {
+        left: 50%;
+        top: 20%;
+        transform: translateX(-50%);
+        width: 300px;
+        height: 300px;
+    }
+
+    .specialOffer {
+        align-items: center;
+        text-align: center;
+    }
+
+    .specialOffer h1 {
+        font-size: 2rem;
+    }
+
+    .specialOffer p {
+        max-width: 100%;
+    }
+
+    .offerImg img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .offer {
+        padding: 2rem 1rem;
+    }
+
+    .specialOffer h1 {
+        font-size: 1.75rem;
+    }
+
+    .specialOffer p {
+        font-size: 0.9rem;
+    }
+
+    .specialOffer button {
+        padding: 0.875rem 2rem;
+        font-size: 0.9rem;
+    }
+}
+

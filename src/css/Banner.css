@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+/* O bannerHome agora cuida apenas do fundo e do posicionamento externo */
+#bannerHome {
+  background-color: #f5f5f5;
+  width: 100%;
+  height: 70vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  display: flex;
+  justify-content: center; /* Centraliza o container interno */
+}
+
+/* Novo container para alinhar com o Header (mesmo max-width e padding) */
+.banner-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  height: 100%;
+}
+
+#bannerOfertas {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  /* padding-left removido para respeitar o container */
+}
+
+#bannerOfertas h3 {
+  color: #F6AA1C;
+  font-size: 16px;
+}
+
+#bannerOfertas h1 {
+  font-size: 50px;
+}
+
+#bannerOfertas p {
+  font-size: 14px;
+  color: #1f1f1f;
+}
+
+#bannerOfertas button {
+  width: 10vw;
+  min-width: 150px; /* Garante tamanho mínimo legível */
+  height: 5vh;
+  min-height: 40px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #c92071;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+#bannerOfertas button:hover {
+  background-color: #eb7bb1;
+}
+
+#bannerImg {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center; /* Centraliza verticalmente o slider */
+  justify-content: center;
+  text-align: center;
+  overflow-y: hidden;
+}
+
+#bannerImg div {
+  width: 100%;
+  overflow: unset;
+  object-fit: contain;
+}
+
+#bannerImg img {
+  margin: 0 auto; /* Centraliza a imagem no slide */
+  max-width: 90%;
+  max-height: 60vh;
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 768px) {
+  #bannerHome {
+    height: auto;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding: 0;
+  }
+
+  .banner-container {
+    flex-direction: column; /* Empilha imagem e texto */
+    padding: 20px;
+    gap: 30px;
+  }
+
+  #bannerImg {
+    width: 100%;
+    height: auto;
+    order: 1; /* Imagem aparece primeiro no mobile */
+    margin-bottom: 0;
+  }
+
+  #bannerImg img {
+    max-width: 100%;
+    max-height: 300px;
+  }
+
+  #bannerOfertas {
+    width: 100%;
+    order: 2;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+  }
+
+  #bannerOfertas h3 {
+    font-size: 14px;
+    color: #C92071;
+    font-weight: 400;
+  }
+
+  #bannerOfertas h1 {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+
+  #bannerOfertas p {
+    font-size: 14px;
+    color: #474747;
+    line-height: 1.5;
+  }
+
+  #bannerOfertas button {
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  /* Estilizar os dots do carrossel */
+  .slick-dots {
+    bottom: -25px !important;
+  }
+
+  .slick-dots li button:before {
+    font-size: 8px;
+    color: #cccccc;
+  }
+
+  .slick-dots li.slick-active button:before {
+    color: #C92071;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-container {
+    padding: 20px 15px;
+  }
+
+  #bannerImg img {
+    max-height: 250px;
+  }
+
+  #bannerOfertas h3 {
+    font-size: 13px;
+  }
+
+  #bannerOfertas h1 {
+    font-size: 28px;
+  }
+
+  #bannerOfertas p {
+    font-size: 13px;
+  }
+
+  #bannerOfertas button {
+    width: 140px;
+    height: 44px;
+    font-size: 15px;
+  }
+}

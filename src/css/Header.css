@@ -1,0 +1,493 @@
+.main-header {
+  width: 100%;       
+  background-color: var(--white);
+  margin: 0;          
+  padding: 20px 0;    
+  display: flex;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  height: 60px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo-area img {
+  height: 44px;
+  width: auto;
+  
+}
+
+.logo-text {
+  color: var(--primary);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* --- Barra de Busca --- */
+.search-wrapper {
+  flex: 1;
+  max-width: 550px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border:1px solid black;
+  border-radius: 20px;
+}
+
+.search-input {
+  width: 100%;
+  height: 45px;
+  background-color: var(--light-gray-3);
+  border: none;
+  border-radius: 8px;
+  padding: 0 50px 0 20px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-btn {
+  position: absolute;
+  right: 15px;
+  background: none;
+  border: none;
+  color: var(--light-gray);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* --- Ações do Usuário --- */
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.signup-link {
+  color: var(--dark-gray-2);
+  text-decoration: underline;
+  font-size: 17px;
+}
+
+.login-button {
+  width: 144px;
+  height: 40px;
+  font-size:14px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: #c92071;
+  color: white;
+}
+
+.login-button:hover {
+  opacity: 0.9;
+}
+
+.cart-link {
+  color: var(--primary);
+  font-size: 24px;
+  position: relative;
+  text-decoration: none;
+}
+
+
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: var(--error);
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* --- Navegação --- */
+.header-nav {
+  margin-top: 25px;
+  overflow: hidden !important;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+
+.header-nav *,
+.header-nav *[class*="scrollable"],
+.header-nav *.scrollable {
+  overflow: hidden !important;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 30px;
+  overflow: hidden !important;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+
+.nav-list[class*="scrollable"],
+.nav-list.scrollable,
+.header-nav[class*="scrollable"],
+.header-nav.scrollable {
+  overflow: hidden !important;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+
+.nav-list li {
+  overflow: hidden !important;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+
+.nav-list li[class*="scrollable"],
+.nav-list li.scrollable {
+  overflow: hidden !important;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: var(--dark-gray-2);
+  font-size: 16px;
+  padding-bottom: 5px;
+  overflow: hidden !important;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+
+.nav-item[class*="scrollable"],
+.nav-item.scrollable {
+  overflow: hidden !important;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+
+.nav-item::after,
+.nav-item::before {
+  content: none !important;
+  display: none !important;
+  border: none !important
+}
+
+
+
+.nav-item .pi,
+.nav-item [class*="pi-"],
+.nav-item [class*="arrow"],
+.nav-item span {
+  display: none !important;
+}
+
+.nav-item:hover, 
+.nav-item.active {
+  color:#00bfff;
+  font-weight: bold;
+  border-bottom: 2px solid #00bfff;
+}
+
+/* Ocultar no desktop - visíveis apenas no menu mobile */
+.mobile-auth-actions,
+.mobile-nav-separator {
+  display: none;
+}
+
+/* --- Menu Mobile --- */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--primary);
+  cursor: pointer;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  
+  position: relative;
+}
+
+.mobile-search-icon {
+  display: none;
+  font-size: 20px;
+  color: var(--dark-gray-2);
+  cursor: pointer;
+}
+
+.mobile-menu-overlay {
+  display: none;
+}
+
+/* --- Responsive Mobile --- */
+@media screen and (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: flex;
+    order: 1;
+    position: relative;
+    z-index:1002;
+  }
+
+  .logo-area {
+    order: 2;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .search-wrapper {
+    display: none;
+  }
+
+  .mobile-search-icon {
+    display: block;
+    order: 3;
+  }
+
+  .user-actions {
+    order: 4;
+    gap: 15px;
+  }
+
+  .signup-link,
+  .login-button {
+    display: none;
+    font-size:16px;
+  }
+
+  .header-top {
+    gap: 15px;
+    padding: 0 10px;
+    
+  }
+
+  .header-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    margin-top: 0;
+    padding: 80px 20px 40px 20px;
+    overflow-y: auto !important;
+    overflow-x: visible !important;
+    box-sizing: border-box;
+  }
+
+  .header-nav.mobile-menu-open {
+    transform: translateX(0);
+  }
+
+  /* Garantir que elementos do menu mobile não sejam escondidos */
+  .header-nav .mobile-nav-content,
+  .header-nav .mobile-nav-content * {
+    overflow: visible !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+  }
+
+  /* Forçar visibilidade dos elementos de autenticação no mobile */
+  .header-nav .mobile-auth-actions {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    width: 100% !important;
+    position: relative !important;
+  }
+
+  .header-nav .mobile-login-button,
+  .header-nav .mobile-signup-link {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    width: 100% !important;
+    position: relative !important;
+  }
+
+  .header-nav .mobile-nav-separator {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: 1px !important;
+    width: 100% !important;
+    position: relative !important;
+  }
+
+  .mobile-nav-content {
+    display: flex !important;
+    flex-direction: column;
+    min-height: calc(100vh - 100px);
+    height: auto;
+    position: relative;
+    padding-bottom: 20px;
+  }
+
+  .mobile-nav-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark-gray-2);
+    margin: 0 0 15px 0;
+    padding: 0;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-list li {
+    width: 100%;
+    border-bottom: none;
+  }
+
+  .nav-item {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    font-size: 16px;
+    overflow: visible !important;
+    color: #666;
+    text-decoration: none;
+  }
+
+  .nav-item:hover {
+    color: #666;
+    border-bottom: none;
+  }
+
+  .nav-item.active {
+    color: #c92071;
+    background-color: transparent;
+    padding-left: 0;
+    border-radius: 0;
+    font-weight: normal;
+    border-bottom: 2px solid #c92071;
+  }
+
+  .mobile-nav-separator {
+    display: block !important;
+    width: 100%;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 20px 0;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .mobile-auth-actions {
+    display: flex !important;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+    width: 100%;
+    padding-bottom: 20px;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative;
+    z-index: 1;
+  }
+
+  .mobile-login-button {
+    display: block !important;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #c92071;
+    color: white !important;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative;
+    z-index: 1;
+  }
+
+  .mobile-login-button:hover {
+    opacity: 0.9;
+  }
+
+  .mobile-signup-link {
+    display: block !important;
+    text-align: center;
+    color: var(--dark-gray-2) !important;
+    text-decoration: underline;
+    font-size: 16px;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Overlay quando menu está aberto */
+  .mobile-menu-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 280px;
+    width: calc(100vw - 280px);
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-nav {
+    width: 100%;
+    padding: 60px 20px 20px 20px;
+  }
+
+  .mobile-menu-overlay {
+    display: none;
+  }
+
+  .logo-area img {
+    height: 36px;
+  }
+}

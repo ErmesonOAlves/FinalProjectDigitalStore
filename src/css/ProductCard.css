@@ -1,0 +1,65 @@
+.product-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 292px; /* Largura baseada na imagem */
+  }
+  
+  .card-img-wrapper {
+    width: 292px;
+    height: 321px;
+    background-color: white; /* Fundo branco caso a imagem seja png transparente */
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05); /* Sombra suave opcional */
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que preencha 292x321 */
+  }
+  
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .product-category {
+      font-size: 12px;
+      font-weight: 700;
+      color: #8F8F8F; /* Light gray */
+      margin: 0;
+  }
+  
+  .product-name {
+    font-size: 24px;
+    font-weight: 400; /* Ajuste conforme a fonte do projeto */
+    color: #474747; /* Dark gray */
+    margin: 5px 0;
+    line-height: 1.2;
+  }
+  
+  .price-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Preço Antigo (quando tem desconto) */
+  .price-old {
+    font-size: 24px;
+    color: #CCCCCC; /* Light gray */
+    text-decoration: line-through;
+  }
+  
+  /* Preço Atual (com ou sem desconto) */
+  .price-current {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1F1F1F; /* Dark gray */
+  }

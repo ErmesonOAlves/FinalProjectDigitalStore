@@ -1,0 +1,69 @@
+.section-container {
+    width: 100%;
+    max-width: 1200px; /* Ajuste conforme seu container global */
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .section-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Alinhamento Esquerda (Padrão): Título na esq, Link na dir */
+  .section-header.align-left {
+    justify-content: space-between;
+  }
+  
+  /* Alinhamento Centro: Título no centro. (O link fica na direita ou flexível) */
+  .section-header.align-center {
+    justify-content: center;
+    position: relative; /* Para posicionar o link se necessário */
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #474747; /* Cor dark-gray-2 aproximada */
+    margin: 0;
+  }
+  
+  .section-link {
+    font-size: 18px;
+    color: #c92071; /* Cor primary do seu projeto */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .section-link:hover {
+    text-decoration: underline;
+  }
+  
+  .link-icon {
+      font-size: 14px;
+  }
+  
+  .section-content {
+    width: 100%;
+    /* Aqui os filhos (children) serão renderizados */
+  }
+  
+  /* Ajuste Mobile */
+  @media (max-width: 768px) {
+      .section-header {
+          flex-direction: column;
+          gap: 10px;
+          align-items: flex-start;
+      }
+      
+      .section-header.align-center {
+          align-items: center;
+      }
+  }
