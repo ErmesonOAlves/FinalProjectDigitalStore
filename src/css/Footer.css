@@ -119,19 +119,40 @@
   font-size: 13px;
   color: #cfcfcf;
 }
-
 @media (max-width: 768px) {
   .footer-content {
-    flex-direction: column;
-    gap: 40px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    
+   
+    gap: 0; 
+    
+   
+    padding: 0 20px; 
+    align-items: flex-start;
   }
+
+  
+  .footer-col {
+    flex: unset; 
+    min-width: unset; 
+    
+    
+    width: 48%; 
+    margin-bottom: 40px;
+  }
+
 
   .logo-col {
+    width: 100%;
     max-width: 100%;
-    text-align: left;
   }
 
-  .footer-col {
+
+  .footer-content > div:last-child {
     width: 100%;
   }
+
 }

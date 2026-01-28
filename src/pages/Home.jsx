@@ -4,7 +4,7 @@ import ProductListing from '../components/ProductListing'
 import SpecialOffer from '../components/SpecialOffer';
 
 const Home = () => {
-    // Array com 8 produtos (mesma imagem em loop)
+    // Array com 8 produtos (mesma imagem loop)
     const products = Array.from({ length: 8 }, (_, index) => ({
         name: `K-Swiss V8 - Masculino`,
         price: 200,
