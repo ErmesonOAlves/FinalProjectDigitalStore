@@ -1,6 +1,7 @@
 import React from 'react'
 import '../css/Footer.css';
-import logo2 from '../../assets/logo2.png';
+import Logo from './Logo'
+import LogoFooter from '../../assets/logo-footer.svg';
 import Informations from './Informations';
 import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
 
@@ -48,8 +49,7 @@ export default function Footer() {
         
         <div className="footer-col logo-col">
           <div className="logo-container">
-             <img src={logo2} alt="Logo Digital Store" className="footer-logo" />
-             
+             <Logo src={LogoFooter} className="footer-logo" />
           </div>
           <p className="description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor

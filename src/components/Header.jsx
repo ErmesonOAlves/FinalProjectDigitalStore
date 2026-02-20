@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink, Link } from "react-router-dom";
 import { FaShoppingCart, FaSearch, FaBars, FaTimes } from 'react-icons/fa';
-import Logo from "../../assets/logo.png";
+import Logo from "./Logo";
 import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
 import "../css/Header.css";
@@ -43,9 +43,9 @@ function Header() {
             {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
 
-          <a href="/" className="logo-area" onClick={closeMobileMenu}>
-            <img src={Logo}  />
-          </a>
+          <Link to ='/' className="logo-area" onClick={closeMobileMenu}>
+            <Logo width="253" height="44" />
+          </Link>
 
           <div className="search-wrapper">
             <input 
@@ -66,15 +66,15 @@ function Header() {
           </div>
 
           <div className="user-actions">
-            <a href="/cadastro" className="signup-link">Cadastre-se</a>
-            <a href="">
+            <Link to="/cadastro" className="signup-link">Cadastre-se</Link>
+           
               <button className="login-button" onClick={()=> navigate('/login')}>Entrar</button>
-            </a>
+            
             <div className="cart-wrapper">
-              <a href="/carrinho" className="cart-link">
+              <Link to="/carrinho" className="cart-link">
                 <FaShoppingCart />
                 <span className="cart-badge">2</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -85,19 +85,19 @@ function Header() {
         
         <nav className={`header-nav ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
           <ul className="nav-list">
-            <li><a href="/" className="nav-item" onClick={closeMobileMenu}>Home</a></li>
-            <li><a href="" className="nav-item" onClick={closeMobileMenu}>Produtos</a></li>
-            <li><a href="/categorias" className="nav-item" onClick={closeMobileMenu}>Categorias</a></li>
-            <li><a href="/pedidos" className="nav-item" onClick={closeMobileMenu}>Meus Pedidos</a></li>
+            <li><NavLink to="/" className="nav-item" onClick={closeMobileMenu}>Home</NavLink></li>
+            <li><NavLink to="/produtos" className="nav-item" onClick={closeMobileMenu}>Produtos</NavLink></li>
+            <li><NavLink to="/categorias" className="nav-item" onClick={closeMobileMenu}>Categorias</NavLink></li>
+            <li><NavLink to="/pedidos" className="nav-item" onClick={closeMobileMenu}>Meus Pedidos</NavLink></li>
           </ul>
           <div className="mobile-nav-separator"></div>
           <div className="mobile-auth-actions">
             <button className="mobile-login-button" onClick={() => { navigate('/login'); closeMobileMenu(); }}>
               Entrar
             </button>
-            <a href="/cadastro" className="mobile-signup-link" onClick={closeMobileMenu}>
+            <Link href="/cadastro" className="mobile-signup-link" onClick={closeMobileMenu}>
               Cadastre-se
-            </a>
+            </Link>
           </div>
         </nav>
 

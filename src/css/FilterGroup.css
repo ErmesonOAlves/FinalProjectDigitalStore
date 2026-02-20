@@ -1,0 +1,36 @@
+.filter-group {
+  margin-bottom: 24px;
+}
+
+.filter-group-title {
+  font-size: 14px;
+  color: #474747;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+}
+
+.filter-group-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #474747;
+}
+
+.filter-input {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  accent-color: #C92071;
+}
+
+.filter-label {
+  user-select: none;
+}

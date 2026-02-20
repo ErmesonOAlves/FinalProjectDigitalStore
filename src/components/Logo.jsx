@@ -1,9 +1,12 @@
+import LogoImage from "../../assets/logo.png";
 
-const Logo = () => {
+const Logo = ({ src = LogoImage, alt = "Digital Store Logo", width, height, className = "" }) => {
+    const style = {};
+    if (width) style.width = `${width}px`;
+    if (height) style.height = `${height}px`;
+    
     return (
-        <div className="logo-container">
-      <img src="/logostore.png" alt="logo digital store" />
-    </div>
+        <img src={src} alt={alt} style={style} className={className} />
     );
 }
  
