@@ -3,8 +3,10 @@ import '../css/SpecialOffer.css'
 export default function SpecialOffer(){
     return(<>
         <div className="offer">
-            <div className="offerImg">
-                <img src={jordan} alt="" />
+            <div className="offerContainer">
+                <div className="imgWrapper">
+                    <img src={jordan} alt="" />
+                </div>
                 <div className="specialOffer">
                     <h3>Oferta especial</h3>
                     <h1>Air Jordan edição de colecionador</h1>

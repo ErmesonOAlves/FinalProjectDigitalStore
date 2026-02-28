@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .offer {
     width: 100%;
     background-color: #ffffff;
@@ -5,35 +9,48 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    position: relative;
 }
 
-.offerImg {
+.offerContainer {
     max-width: 1200px;
     width: 100%;
     display: flex;
     align-items: center;
     gap: 3rem;
-    position: relative;
 }
 
-.offerImg img {
+.offerContainer{
+    max-width: 1200px;
+    width:100%;
+    display:flex;
+    align-items: center;
+    gap:3rem;
+}
+.imgWrapper{
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: visible;
+}
+.imgWrapper img {
+    width: 100%;
     max-width: 500px;
-    height: auto;
-    object-fit: contain;
     position: relative;
     z-index: 2;
 }
-
-.offerImg::before {
+.imgWrapper::before {
     content: '';
     position: absolute;
-    left: -50px;
+    left: 50%;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
     width: 400px;
     height: 400px;
-    background: linear-gradient(135deg, #e8d5ff 0%, #d4b5ff 100%);
+    background: linear-gradient(135deg, rgba(66, 0, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
     border-radius: 50%;
     z-index: 1;
     opacity: 0.6;
@@ -96,25 +113,26 @@
     transform: translateY(0);
 }
 
-/* Responsive Design */
+
 @media (max-width: 968px) {
-    .offerImg {
+    .offerContainer {
         flex-direction: column;
         gap: 2rem;
         text-align: center;
     }
 
-    .offerImg::before {
-        left: 50%;
-        top: 20%;
-        transform: translateX(-50%);
-        width: 300px;
+    .imgWrapper::before {
+        width: 300px; 
         height: 300px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .specialOffer {
         align-items: center;
         text-align: center;
+        padding: 0;
     }
 
     .specialOffer h1 {
@@ -125,8 +143,9 @@
         max-width: 100%;
     }
 
-    .offerImg img {
+    .imgWrapper img {
         max-width: 100%;
+        height: auto;
     }
 }
 
@@ -139,13 +158,8 @@
         font-size: 1.75rem;
     }
 
-    .specialOffer p {
-        font-size: 0.9rem;
-    }
-
-    .specialOffer button {
-        padding: 0.875rem 2rem;
-        font-size: 0.9rem;
+    .imgWrapper::before {
+        width: 250px;
+        height: 250px;
     }
 }
-
