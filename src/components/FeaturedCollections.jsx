@@ -1,6 +1,6 @@
-import img1 from '../../assets/drop.png';
-import img2 from '../../assets/adidas.png';
-import img3 from '../../assets/beats.png';
+import img1 from '../../assets/collection-1.png';
+import img2 from '../../assets/collection-2.png';
+import img3 from '../../assets/collection-3.png';
 import icon from '../../assets/imgIcon.png';
 import '../css/FeaturedCollections.css';
 

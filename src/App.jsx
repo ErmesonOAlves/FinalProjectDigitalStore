@@ -1,4 +1,4 @@
-import Home from './pages/Home'
+import HomePage from './pages/HomePage'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Layout from './pages/Layout'
 import ProductListingPage from './pages/ProductListingPage'
@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
       <Layout>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/produtos" element={<ProductListingPage/>} />
         </Routes>

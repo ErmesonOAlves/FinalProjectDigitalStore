@@ -1,6 +1,6 @@
-import tenisCard from '../../assets/tenisCard.png';
+import '../css/ProductCard.css';
 
-export default function ProductCard({ name, price, priceDiscount }) {
+export default function ProductCard({ category, name, price, priceDiscount,image }) {
     const hasDiscount = priceDiscount !== undefined && priceDiscount !== null;
     const discountPercentage = hasDiscount 
         ? Math.round(((price - priceDiscount) / price) * 100)
@@ -14,9 +14,10 @@ export default function ProductCard({ name, price, priceDiscount }) {
                 </div>
             )}
             <div className="product-card-image">
-                <img src={tenisCard} alt={name} />
+                <img src={image} alt={name} />
             </div>
             <div className="product-card-info">
+                <p className="product-card-category">{category}</p>
                 <p className="product-card-name">{name}</p>
                 <div className="product-card-price">
                     {hasDiscount ? (

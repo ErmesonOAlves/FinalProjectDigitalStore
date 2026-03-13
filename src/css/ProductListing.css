@@ -145,7 +145,7 @@
   }
 
   .product-listing-header {
-    padding: 0 15px;
+    padding: 0 ;
     margin-bottom: 20px;
   }
 
@@ -161,11 +161,12 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     padding: 0 15px;
+    justify-items:center;
   }
 
   .product-card-image {
     height: 200px;
-  }
+    border-radius:20px;  }
 }
 
 /* Responsive - Mobile */
@@ -178,7 +179,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    padding: 0 10px;
+    padding: 0 ;
   }
 
   .product-listing-header h2 {

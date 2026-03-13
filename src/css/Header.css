@@ -246,9 +246,27 @@
 .mobile-menu-overlay {
   display: none;
 }
-
+.mobile-filters-section {
+  display: none;
+}
 /* --- Responsive Mobile --- */
 @media screen and (max-width: 768px) {
+  .nav-list.hide-on-mobile {
+    display: none;
+  }
+   .mobile-filters-section {
+    display: block;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .mobile-filter-title {
+    font-size: 16px;
+    color: #474747;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+  }
   .mobile-menu-toggle {
     display: flex;
     order: 1;

@@ -4,7 +4,13 @@
     gap: 15px;
     width: 292px; /* Largura baseada na imagem */
   }
-  
+  .product-card-category {
+    font-size: 12px;
+    font-weight: 700;
+    color: #8F8F8F;
+    margin: 0;
+}
+
   .card-img-wrapper {
     width: 292px;
     height: 321px;

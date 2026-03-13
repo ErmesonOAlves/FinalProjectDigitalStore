@@ -1,12 +1,14 @@
 import React, { useState } from "react";
+import {useLocation} from 'react-router-dom'
 import { useNavigate, NavLink, Link } from "react-router-dom";
 import { FaShoppingCart, FaSearch, FaBars, FaTimes } from 'react-icons/fa';
 import Logo from "./Logo";
-import 'primeflex/primeflex.css';
-import 'primeicons/primeicons.css';
+import FilterGroup from './FilterGroup'
 import "../css/Header.css";
 
 function Header() {
+  const location = useLocation()
+  const isProductsPage = location.pathname === '/produtos'
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -24,7 +26,7 @@ function Header() {
 
   const handleSearch = ()=>{
     if(termoPesquisa.trim()){
-      navigate(`/products?filter=${encodeURIComponent(termoPesquisa)}`)
+      navigate(`/produtos?filter=${encodeURIComponent(termoPesquisa)}`)
     }
   };
   const handleKeyDown = (e)=>{
@@ -84,12 +86,52 @@ function Header() {
         )}
         
         <nav className={`header-nav ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
-          <ul className="nav-list">
+          <ul className={`nav-list ${isProductsPage ? 'hide-on-mobile' : ''}`}>
             <li><NavLink to="/" className="nav-item" onClick={closeMobileMenu}>Home</NavLink></li>
             <li><NavLink to="/produtos" className="nav-item" onClick={closeMobileMenu}>Produtos</NavLink></li>
             <li><NavLink to="/categorias" className="nav-item" onClick={closeMobileMenu}>Categorias</NavLink></li>
             <li><NavLink to="/pedidos" className="nav-item" onClick={closeMobileMenu}>Meus Pedidos</NavLink></li>
           </ul>
+          {isProductsPage && (
+          <div className="mobile-filters-section">
+            <h3 className="mobile-filter-title">Filtrar por</h3>
+            <FilterGroup 
+              title="Marca" 
+              inputType="checkbox" 
+              options={[
+                { text: 'Adidas' },
+                { text: 'Nike' },
+                { text: 'Puma' }
+              ]} 
+            />
+            <FilterGroup 
+              title="Categoria" 
+              inputType="checkbox" 
+              options={[
+                { text: 'Esporte e lazer' },
+                { text: 'Casual' },
+                { text: 'Corrida' }
+              ]} 
+            />
+            <FilterGroup 
+              title="Gênero" 
+              inputType="checkbox" 
+              options={[
+                { text: 'Masculino' },
+                { text: 'Feminino' },
+                { text: 'Unisex' }
+              ]} 
+            />
+            <FilterGroup
+              title="Estado"
+              inputType="checkbox"
+              options={[
+                { text: 'Novo' },
+                { text: 'Usado' }
+              ]}
+            />
+          </div>
+        )}
           <div className="mobile-nav-separator"></div>
           <div className="mobile-auth-actions">
             <button className="mobile-login-button" onClick={() => { navigate('/login'); closeMobileMenu(); }}>

@@ -86,6 +86,22 @@
   color: #474747;
   margin-bottom: 20px;
 }
+.no-products-message{
+  
+  text-align: center;
+  font-size: 14px;
+  color: #8F8F8F;
+}
+.no-products-message h2{
+  font-size:2rem;
+  margin-bottom:1rem;
+  color:#1f1f1f;
+}
+.no-products-message p{
+  font-size:1.1rem;
+  color:#8f8f8f;
+  margin: 0.5rem 0;
+}
 
 @media (max-width: 1024px) {
   .product-listing-container {
@@ -109,6 +125,21 @@
 @media (max-width: 768px) {
   .product-listing-main .product-listing-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .filter-section {
+    display: none;
+  }
+
+  .product-listing-sidebar {
+    width: 100%;
+  }
+
+  .sort-section {
+    margin-bottom: 20px;
+  }
+
+  .sort-select {
+    width: 100%;
   }
 }
 
