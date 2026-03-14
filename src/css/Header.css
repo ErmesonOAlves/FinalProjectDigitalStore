@@ -250,7 +250,39 @@
   display: none;
 }
 /* --- Responsive Mobile --- */
+.mobile-search-wrapper {
+  display: none;
+}
 @media screen and (max-width: 768px) {
+  .mobile-search-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--light-gray-3);
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+
+  .mobile-search-input {
+    flex: 1;
+    height: 40px;
+    border: none;
+    background: white;
+    border-radius: 8px;
+    padding: 0 15px;
+    font-size: 16px;
+    outline: none;
+  }
+
+  .mobile-search-btn {
+    background: none;
+    border: none;
+    color: var(--dark-gray-2);
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0 10px;
+  }
   .nav-list.hide-on-mobile {
     display: none;
   }
