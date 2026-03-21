@@ -3,18 +3,20 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Layout from './pages/Layout'
 import ProductListingPage from './pages/ProductListingPage'
 import Login from './components/Login'
+import ProductViewPage from'./pages/ProductViewPage'
 
 function App() {
 
   return (
     <BrowserRouter>
-      <Layout>
+      
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/produtos" element={<ProductListingPage/>} />
+          <Route path="/" element={<Layout><HomePage /></Layout>} />
+          <Route path="/login" element={<Layout><Login /></Layout>} />
+          <Route path="/produtos" element={<Layout><ProductListingPage/></Layout>} />
+          <Route path="/product/:id" element={<ProductViewPage/>} />
         </Routes>
-      </Layout>
+      
     </BrowserRouter>
       
     

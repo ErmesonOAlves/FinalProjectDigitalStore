@@ -1,5 +1,5 @@
 import React from 'react';
-import './Section.css';
+import '../css/Section.css';
 import { FaArrowRight } from 'react-icons/fa'; // Opcional: ícone para o link
 
 const Section = ({ title, titleAlign = "left", link, children }) => {

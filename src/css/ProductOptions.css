@@ -1,0 +1,36 @@
+.product-options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.option-item {
+  border: 1px solid #CCCCCC;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option-item.square {
+  width: 46px;
+  height: 46px;
+}
+
+.option-item.circle {
+  width: 31px;
+  height: 31px;
+}
+
+.option-item.text {
+  font-size: 24px;
+  color: #474747;
+  font-weight: 700;
+}
+
+.option-item.selected {
+  border: 2px solid #C92071;
+}
+
+.option-item:hover {
+  border-color: #C92071;
+}

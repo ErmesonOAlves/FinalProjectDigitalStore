@@ -123,3 +123,28 @@
     height: 65px;
   }
 }
+.gallery-image-wrapper {
+  background-color: #E2E3FF;
+  border-radius: 4px;
+}
+
+/* Cores diferentes para cada thumbnail */
+.gallery-thumb:nth-child(1) {
+  background-color: #E2E3FF;
+}
+
+.gallery-thumb:nth-child(2) {
+  background-color: #FFE8BC;
+}
+
+.gallery-thumb:nth-child(3) {
+  background-color: #FFC0BC;
+}
+
+.gallery-thumb:nth-child(4) {
+  background-color: #DEC699;
+}
+
+.gallery-thumb:nth-child(5) {
+  background-color: #E8DFCF;
+}
